@@ -1,2 +1,2 @@
 ### DDL-команди зі створення таблиць БД
-![](2-DDL/TableCreate.jpg)
+![](https://github.com/OP-NC-EduCentre/bondarenko/blob/3-tasks-of-laboratory-work-2/2-DDL/TableCreate.jpg)
