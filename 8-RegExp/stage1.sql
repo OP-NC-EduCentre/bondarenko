@@ -3,25 +3,32 @@
 використовуючи оператор LIKE.*/
 SELECT Reg_id, Reg_Client, Service_for_registration FROM Registration 
 WHERE 
-    Reg_Client LIKE 'Kat%';
+    Reg_Client LIKE 'K%' OR Reg_Client LIKE 'S%' OR Reg_Client LIKE 'A%';
 /*
     REG_ID REG_CLIENT                               SERVICE_FOR_REGISTRATION
 ---------- ---------------------------------------- ------------------------
          7 Katrena Mila                                                   10
+         1 Anna Bond                                                       1
          2 Katerina Koval                                                  3
+        33 Sergei Tryn                                                    31
          5 Katarina Melnyk                                                 2
 */
 
 /*2. Повторіть завдання 1, використовуючи регулярні вирази з альтернативними варіантами.*/
 SELECT Reg_id, Reg_Client, Service_for_registration FROM Registration 
 WHERE 
-     regexp_like(Reg_Client, 'Kat');
+     regexp_like(Reg_Client, 'K|S|A');
 /*
     REG_ID REG_CLIENT                               SERVICE_FOR_REGISTRATION
 ---------- ---------------------------------------- ------------------------
          7 Katrena Mila                                                   10
+         1 Anna Bond                                                       1
          2 Katerina Koval                                                  3
+         4 Ivan Kulov                                                      2
+        33 Sergei Tryn                                                    31
          5 Katarina Melnyk                                                 2
+
+6 rows selected.
 */
 
 /*3. Одна з колонок таблиць повинна містити строкове значення з цифрами від 3 до 8 у
