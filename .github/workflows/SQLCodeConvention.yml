@@ -1,7 +1,7 @@
 name: SQLCodeConvention
 on:
   push: 
-    branches: 19-tasks-of-laboratory-work-10
+    branches: 19-tasks-of-laboratory-work-10-1
 jobs:
  _2sql:
   runs-on: ubuntu-latest
@@ -11,4 +11,4 @@ jobs:
   - name: Start SQL Linter
     run: |
       pip install sqlfluff
-      sqlfluff lint $GITHUB_WORKSPACE/2.sql  --dialect oracle
+      sqlfluff lint $GITHUB_WORKSPACE/10-SQLCodingConventionsGitHubActions/2.sql  --dialect oracle
