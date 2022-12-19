@@ -70,8 +70,8 @@ on                  r_registration
 
 /*2.2 Виконати видалення одного рядка з віртуальної таблиці,
 створеної у попередньому завданні. Прокоментувати реакцію СУБД.*/
-  DELETE FROM objecttype_attr
-  WHERE objecttype_attr.attr_id = 4;
+    DELETE FROM objecttype_attr
+    WHERE objecttype_attr.attr_id = 4;
 /*
 ERROR at line 1:
 ORA-42399: cannot perform a DML operation on a read-only view
@@ -79,7 +79,8 @@ ORA-42399: cannot perform a DML operation on a read-only view
 */
 
 /*2.3 Створити віртуальну таблицю, що містить дві колонки:
-назва класу, кількість екземплярів об'єктів класу. Отримати вміст таблиці.*/
+назва класу, кількість екземплярів об'єктів класу. 
+Отримати вміст таблиці.*/
 /*Виправлено:
 L003	65 / 5	Expected 0 indentations, found 1 [compared to line 64]
 L036	67 / 1	Select targets should be on a new line.
@@ -90,16 +91,16 @@ L003	70 / 6	Expected 2 indentations, found less than 2 [compared to line 69]
     (object_type, objects_count)
     AS
     SELECT
-        objtype.name,
+            objtype.name,
            COUNT(objects.object_id) AS countobj
-    FROM objtype,
-      objects
+      FROM objtype,
+        objects
      WHERE objects.object_type_id = objtype.object_type_id
     GROUP BY objtype.name;
 
-    SELECT
-      object_type,
-      objects_count
+        SELECT
+        object_type,
+        objects_count
     FROM object_count;
 
 /*
@@ -110,7 +111,8 @@ OBJECT_TYPE   OBJECTS_COUNT
 */
 
 /*2.4 Перевірити можливість виконання операції зміни даних,
-створеної у попередньому завданні. Прокоментувати реакцію СУБД.*/
+створеної у попередньому завданні. 
+Прокоментувати реакцію СУБД.*/
     UPDATE object_count
     SET objects_count = 3
     WHERE object_count.object_type = 'Виконані_послуги';
