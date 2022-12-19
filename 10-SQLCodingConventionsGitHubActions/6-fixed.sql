@@ -63,15 +63,15 @@ ORA-42399: cannot perform a DML operation on a read-only view
 назва класу, кількість екземплярів об'єктів класу.
 Отримати вміст таблиці.*/
 CREATE OR REPLACE VIEW object_count
-    (object_type, objects_count)
-    AS
-    SELECT
+(object_type, objects_count)
+AS
+SELECT
         objtype.name,
         COUNT(objects.object_id) AS countobj
-    FROM objtype,
+FROM objtype,
         objects
-    WHERE objects.object_type_id = objtype.object_type_id
-    GROUP BY objtype.name;
+WHERE objects.object_type_id = objtype.object_type_id
+GROUP BY objtype.name;
 
 SELECT
         object_type,
