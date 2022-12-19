@@ -3,14 +3,19 @@
 отримати інформацію про атрибутні типи. Отримати вміст таблиці.*/
 /*Виправлено:
 L003	5 / 13	Expected 0 indentations, found 3 [compared to line 04]
-L036	10 / 1	Select targets should be on a new line unless there is only one select target.
-L026	10 / 8	Reference 'O.CODE' refers to table/view not found in the FROM clause.
+L036	10 / 1	Select targets should be on a new line
+unless there is only one select target.
+L026	10 / 8	Reference 'O.CODE' refers to table/view
+not found in the FROM clause.
 L014	10 / 10	Unquoted identifiers must be consistently lower case.
-L026	10 / 15	Reference 'A.ATTR_ID' refers to table/view not found in the FROM clause.
+L026	10 / 15	Reference 'A.ATTR_ID' refers to table/view
+not found in the FROM clause.
 L014	10 / 17	Unquoted identifiers must be consistently lower case.
-L026	10 / 25	Reference 'A.CODE' refers to table/view not found in the FROM clause.
+L026	10 / 25	Reference 'A.CODE' refers to table/view
+not found in the FROM clause.
 L014	10 / 27	Unquoted identifiers must be consistently lower case.
-L026	10 / 32	Reference 'A.NAME' refers to table/view not found in the FROM clause.
+L026	10 / 32	Reference 'A.NAME' refers to table/view
+not found in the FROM clause.
 L014	10 / 34	Unquoted identifiers must be consistently lower case.
 L031	12 / 15	Avoid aliases in from clauses and join conditions.
 PRS	15 / 1	Line 15, Position 1: Found unparsable section: 'WITH READ ONLY'
@@ -22,12 +27,12 @@ SELECT
     attrtype.attr_id,
     attrtype.code,
     attrtype.name
-FROM objtype,
+ FROM objtype,
     attrtype
 WHERE objtype.object_type_id = attrtype.object_type_id
 ORDER BY attrtype.object_type_id, attrtype.attr_id
 
-SELECT
+ SELECT
     object_code,
     attr_id,
     attr_code,
