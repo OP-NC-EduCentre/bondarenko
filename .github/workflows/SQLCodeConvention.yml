@@ -1,7 +1,7 @@
 name: SQLCodeConvention
 on:
   push: 
-    branches: 19-tasks-of-laboratory-work-10-1
+    branches: 19-tasks-of-laboratory-work-10
 jobs:
  _2sql:
   runs-on: ubuntu-latest
