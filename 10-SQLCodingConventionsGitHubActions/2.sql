@@ -5,7 +5,7 @@ CREATE TABLE Services(
 
 /*
 L014	7 / 2	Unquoted identifiers must be consistently capitalised.
-L008	9 / 17	Commas should be followed by a single whitespace unless followed by a comment.
+L008	9 / 17	Commas should be followed by a single whitespace.
 */
 CREATE TABLE Implementers(
     Implem_id NUMBER(6), -- номер сотрудника
