@@ -73,8 +73,8 @@ WHERE objects.object_type_id = objtype.object_type_id
 GROUP BY objtype.name;
 
 SELECT
-        object_type,
-        objects_count
+    object_type,
+    objects_count
 FROM object_count;
 
 /*
