@@ -27,7 +27,7 @@ SELECT
     attrtype.attr_id,
     attrtype.code,
     attrtype.name
- FROM objtype,
+FROM objtype,
     attrtype
 WHERE objtype.object_type_id = attrtype.object_type_id
 ORDER BY attrtype.object_type_id, attrtype.attr_id
@@ -37,7 +37,8 @@ ORDER BY attrtype.object_type_id, attrtype.attr_id
     attr_id,
     attr_code,
     attr_name
-FROM objecttype_attr;
+ FROM objecttype_attr;
+
 /*
 CODE        ATTR_ID CODE       NAME
 ---------- -------- ---------- --------------------
@@ -55,7 +56,7 @@ List_Of_Se        5 Service_pr Вартість
 rvices              ice
 
 List_Of_Se        6 Service_im Номер_викон._співроб.
-rvices              plementer  
+rvices              plementer
 
 Registrati        7 Reg_id     Номер_запису
 on
@@ -64,18 +65,16 @@ Registratio       8 Reg_Client Записаний_клієнт
 on
 
 Registratio       9 Service_fo Послуга_із_запису
-on                  r_registra
-                    tion
+on                  r_registration
 */
 
 /*2.2 Виконати видалення одного рядка з віртуальної таблиці, 
 створеної у попередньому завданні. Прокоментувати реакцію СУБД.*/
-DELETE FROM objecttype_attr
-WHERE objecttype_attr.attr_id = 4;
+ DELETE FROM objecttype_attr
+ WHERE objecttype_attr.attr_id = 4;
 /*
 ERROR at line 1:
 ORA-42399: cannot perform a DML operation on a read-only view
-
 Видалити рядок не можна так як view працює лише у режимі для читання
 */
 
@@ -94,7 +93,7 @@ SELECT
     objtype.name,
     COUNT(objects.object_id) AS countobj
 FROM objtype,
-    objects
+     objects
 WHERE objects.object_type_id = objtype.object_type_id
 GROUP BY objtype.name;
 
