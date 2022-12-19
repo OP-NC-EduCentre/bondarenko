@@ -11,7 +11,7 @@ SELECT
 FROM objtype,
     attrtype
 WHERE objtype.object_type_id = attrtype.object_type_id
-ORDER BY attrtype.object_type_id, attrtype.attr_id
+ORDER BY attrtype.object_type_id, attrtype.attr_id;
 
  SELECT
     object_code,
