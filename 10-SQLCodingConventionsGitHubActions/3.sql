@@ -106,7 +106,7 @@ L013	85 / 5	Column expression without alias. Use explicit `AS` clause.
 SELECT
     Implem_id,
     Salary,
-    REVERSE(Implem_name)
+    REVERSE(Implem_name) AS Reverse
 FROM Implementers
 WHERE Implem_name = 'Masha' AND Salary > 5000;
 -- Так як інвертувати тип "int" не можна, то інвертую значення поля ім'я
