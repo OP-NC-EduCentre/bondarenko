@@ -86,34 +86,34 @@ L036	67 / 1	Select targets should be on a new line.
 L013	68 / 8	Column expression without alias. Use explicit `AS` clause.
 L003	70 / 6	Expected 2 indentations, found less than 2 [compared to line 69]
 */
- CREATE OR REPLACE VIEW object_count
- (object_type, objects_count)
- AS
- SELECT
-     objtype.name,
-     COUNT(objects.object_id) AS countobj
- FROM objtype,
+    CREATE OR REPLACE VIEW object_count
+    (object_type, objects_count)
+    AS
+    SELECT
+        objtype.name,
+           COUNT(objects.object_id) AS countobj
+    FROM objtype,
       objects
- WHERE objects.object_type_id = objtype.object_type_id
- GROUP BY objtype.name;
+     WHERE objects.object_type_id = objtype.object_type_id
+    GROUP BY objtype.name;
 
- SELECT
-     object_type,
-     objects_count
- FROM object_count;
+    SELECT
+      object_type,
+      objects_count
+    FROM object_count;
 
 /*
 OBJECT_TYPE   OBJECTS_COUNT
 ------------- -------------
 Список_послуг 2
-Послуги       2          
+Послуги       2
 */
 
 /*2.4 Перевірити можливість виконання операції зміни даних,
 створеної у попередньому завданні. Прокоментувати реакцію СУБД.*/
- UPDATE object_count
- SET objects_count = 3
- WHERE object_count.object_type = 'Виконані_послуги';
+    UPDATE object_count
+    SET objects_count = 3
+    WHERE object_count.object_type = 'Виконані_послуги';
 /*
 ORA-01732: data manipulation operation not legal on this view
 Ця таблиця є результатом функції агрегації,
