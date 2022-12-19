@@ -66,10 +66,9 @@ CREATE OR REPLACE VIEW object_count
 (object_type, objects_count)
 AS
 SELECT
-        objtype.name,
-        COUNT(objects.object_id) AS countobj
-FROM objtype,
-        objects
+    objtype.name,
+    COUNT(objects.object_id) AS countobj
+FROM objtype, objects
 WHERE objects.object_type_id = objtype.object_type_id
 GROUP BY objtype.name;
 
