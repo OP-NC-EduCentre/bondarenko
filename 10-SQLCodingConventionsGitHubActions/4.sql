@@ -1,10 +1,10 @@
 /*3.1 Для будь-яких двох таблиць створити команду отримання декартового добутку.
 */
 SELECT
-    Serv_name,
-    Reg_date
+    Services.Serv_name,
+    Services.Reg_date
 FROM Services CROSS JOIN Registration;
-SERV_NAME       REG_DATE
+/*SERV_NAME       REG_DATE
 --------------- ---------
 Hair_Styling    10-JUL-22
 Haircut         10-JUL-22
@@ -40,12 +40,12 @@ Massage         01-SEP-22
 30 rows selected.
 */
 
-/*3.2 Для двох таблиць, пов'язаних через PK-колонку та FK-колонку, створити 
-команду отримання двох колонок першої та другої таблиць з використанням 
+/*3.2 Для двох таблиць, пов'язаних через PK-колонку та FK-колонку, створити
+команду отримання двох колонок першої та другої таблиць з використанням
 екві-з’єднання таблиць. Використовувати префікси.
 */
 /*Виправила:
-L008	12 / 30	Commas should be followed by a single whitespace unless followed by a comment.
+L008	12 / 30	Commas should be followed by a single whitespace.
 L014	14 / 2	Unquoted identifiers must be consistently capitalised.
 L001	14 / 32	Unnecessary trailing whitespace.
 L003	16 / 5  Expected 0 indentations, found 1 [compared to line 11]
@@ -97,8 +97,8 @@ Lila                                           7900            1           650
 Uliana                                         8300            3           650
 */
 
-/*3.4 Повторити рішення завдання 3.2, замінивши еквіз'єднання на зовнішнє з'єднання
-(лівостороннє або правостороннє), яке дозволить побачити рядки таблиці з 
+/*3.4 Повторити рішення завдання 3.2, замінивши еквіз'єднання на зовнішнє
+(лівостороннє або правостороннє), яке дозволить побачити рядки таблиці з
 PK-колонкою, не пов'язані з FK-колонкою.
 */
 /*Виправила:
@@ -127,4 +127,3 @@ Alina                                          8000
 
 7 rows selected.
 */
-
