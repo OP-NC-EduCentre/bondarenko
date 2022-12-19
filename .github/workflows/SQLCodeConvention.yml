@@ -3,7 +3,7 @@ on:
   push: 
     branches: 19-tasks-of-laboratory-work-10-1
 jobs:
- _2sql:
+ SQLCodeConvention:
   runs-on: ubuntu-latest
   steps:
   - name: Checkout Code in Repository
