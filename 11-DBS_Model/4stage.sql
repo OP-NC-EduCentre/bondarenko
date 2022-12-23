@@ -1,5 +1,5 @@
-/*4.1. Âèêîíàéòå ââåäåííÿ 5 ðÿäê³â ó òàáëèöþ áàçè äàíèõ ³ç äèíàì³÷íîþ ãåíåðàö³ºþ
-êîìàíäè. Çíà÷åííÿ ïåðâèííîãî êëþ÷à ãåíåðóþòüñÿ àâòîìàòè÷íî, ðåøòà äàíèõ äóáëþºòüñÿ.*/
+/*4.1. Ð’Ð¸ÐºÐ¾Ð½Ð°Ð¹Ñ‚Ðµ Ð²Ð²ÐµÐ´ÐµÐ½Ð½Ñ 5 Ñ€ÑÐ´ÐºÑ–Ð² Ñƒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†ÑŽ Ð±Ð°Ð·Ð¸ Ð´Ð°Ð½Ð¸Ñ… Ñ–Ð· Ð´Ð¸Ð½Ð°Ð¼Ñ–Ñ‡Ð½Ð¾ÑŽ Ð³ÐµÐ½ÐµÑ€Ð°Ñ†Ñ–Ñ”ÑŽ
+ÐºÐ¾Ð¼Ð°Ð½Ð´Ð¸. Ð—Ð½Ð°Ñ‡ÐµÐ½Ð½Ñ Ð¿ÐµÑ€Ð²Ð¸Ð½Ð½Ð¾Ð³Ð¾ ÐºÐ»ÑŽÑ‡Ð° Ð³ÐµÐ½ÐµÑ€ÑƒÑŽÑ‚ÑŒÑÑ Ð°Ð²Ñ‚Ð¾Ð¼Ð°Ñ‚Ð¸Ñ‡Ð½Ð¾, Ñ€ÐµÑˆÑ‚Ð° Ð´Ð°Ð½Ð¸Ñ… Ð´ÑƒÐ±Ð»ÑŽÑ”Ñ‚ÑŒÑÑ.*/
 DECLARE
     v_REG_ID REGISTRATION.REG_ID%TYPE := 26; 
 	v_REG_CLIENT REGISTRATION.REG_CLIENT%TYPE; 
@@ -27,9 +27,9 @@ END;
 PL/SQL procedure successfully completed.
 */
 
-/*4.2. Ñêëàñòè äèíàì³÷íèé çàïèò ñòâîðåííÿ òàáëèö³, ³ìåíàìè êîëîíîê ÿêî¿ áóäóòü 
-çíà÷åííÿ áóäü-ÿêî¿ ñèìâîëüíî¿ êîëîíêè. Ïîïåðåäíüî âèêîíàòè ïåðåâ³ðêó ³ñíóâàííÿ 
-òàáëèö³ ç ¿¿ âèäàëåííÿì.*/
+/*4.2. Ð¡ÐºÐ»Ð°ÑÑ‚Ð¸ Ð´Ð¸Ð½Ð°Ð¼Ñ–Ñ‡Ð½Ð¸Ð¹ Ð·Ð°Ð¿Ð¸Ñ‚ ÑÑ‚Ð²Ð¾Ñ€ÐµÐ½Ð½Ñ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ–, Ñ–Ð¼ÐµÐ½Ð°Ð¼Ð¸ ÐºÐ¾Ð»Ð¾Ð½Ð¾Ðº ÑÐºÐ¾Ñ— Ð±ÑƒÐ´ÑƒÑ‚ÑŒ 
+Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½Ñ Ð±ÑƒÐ´ÑŒ-ÑÐºÐ¾Ñ— ÑÐ¸Ð¼Ð²Ð¾Ð»ÑŒÐ½Ð¾Ñ— ÐºÐ¾Ð»Ð¾Ð½ÐºÐ¸. ÐŸÐ¾Ð¿ÐµÑ€ÐµÐ´Ð½ÑŒÐ¾ Ð²Ð¸ÐºÐ¾Ð½Ð°Ñ‚Ð¸ Ð¿ÐµÑ€ÐµÐ²Ñ–Ñ€ÐºÑƒ Ñ–ÑÐ½ÑƒÐ²Ð°Ð½Ð½Ñ 
+Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ– Ð· Ñ—Ñ— Ð²Ð¸Ð´Ð°Ð»ÐµÐ½Ð½ÑÐ¼.*/
 DECLARE 
 	create_str VARCHAR2(99);
 	v_count NUMBER;
@@ -53,42 +53,34 @@ END;
 PL/SQL procedure successfully completed.
 */
 
-/*4.3. Êîìàíäà ALTER SEQUENCE ìîæå çì³íþâàòè ïî÷àòêîâå çíà÷åííÿ ãåíåðàòîðà
-ïî÷èíàþ÷è ç ÑÓÁÄ âåðñ³¿ 12. Äëÿ ðàíí³õ âåðñ³é äîâîäèòüñÿ âèêîíóâàòè äâ³ êîìàíäè: 
-âèäàëåííÿ ãåíåðàòîðà òà ñòâîðåííÿ ãåíåðàòîðà ç íîâèì ïî÷àòêîâèì çíà÷åííÿì.
-Ç óðàõóâàííÿì âàøî¿ ïðåäìåòíî¿ îáëàñò³ ñòâîðèòè àíîí³ìíèé PL/SQL-áëîê, ÿêèé
-âèêëèêàòèìå îäèí ³ç âàð³àíò³â SQL-çàïèò³â çì³íè ïî÷àòêîâîãî çíà÷åííÿ ãåíåðàòîðà 
-çàëåæíî â³ä çíà÷åííÿ âåðñ³¿ ÑÓÁÄ.*/
-DECLARE
-	salary_total integer := 0;
-	TYPE implementers_rec_type IS RECORD 
-			( implem_name implementers.implem_name%TYPE, 
-            salary implementers.salary%TYPE );
-	implementers_rec implementers_rec_type;
-	imp_list_cursor SYS_REFCURSOR;
-	table_name varchar2(20) := 'implementers';
-BEGIN
-	DBMS_OUTPUT.PUT_LINE('Implem_name   Salary');
-	OPEN imp_list_cursor FOR 'SELECT implem_name, salary FROM ' || table_name;
-	FETCH imp_list_cursor INTO implementers_rec;
-	WHILE imp_list_cursor%FOUND LOOP
-		salary_total := salary_total + implementers_rec.salary;
-		DBMS_OUTPUT.PUT_LINE(RPAD(implementers_rec.implem_name,10,' ') 
-        || implementers_rec.salary);
-		FETCH imp_list_cursor INTO implementers_rec;
-	END LOOP;
-	CLOSE imp_list_cursor;
-	DBMS_OUTPUT.PUT_LINE('Salary Total = ' || salary_total); 
-END;
+/*4.3. ÐšÐ¾Ð¼Ð°Ð½Ð´Ð° ALTER SEQUENCE Ð¼Ð¾Ð¶Ðµ Ð·Ð¼Ñ–Ð½ÑŽÐ²Ð°Ñ‚Ð¸ Ð¿Ð¾Ñ‡Ð°Ñ‚ÐºÐ¾Ð²Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½Ñ Ð³ÐµÐ½ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð°
+Ð¿Ð¾Ñ‡Ð¸Ð½Ð°ÑŽÑ‡Ð¸ Ð· Ð¡Ð£Ð‘Ð” Ð²ÐµÑ€ÑÑ–Ñ— 12. Ð”Ð»Ñ Ñ€Ð°Ð½Ð½Ñ–Ñ… Ð²ÐµÑ€ÑÑ–Ð¹ Ð´Ð¾Ð²Ð¾Ð´Ð¸Ñ‚ÑŒÑÑ Ð²Ð¸ÐºÐ¾Ð½ÑƒÐ²Ð°Ñ‚Ð¸ Ð´Ð²Ñ– ÐºÐ¾Ð¼Ð°Ð½Ð´Ð¸: 
+Ð²Ð¸Ð´Ð°Ð»ÐµÐ½Ð½Ñ Ð³ÐµÐ½ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð° Ñ‚Ð° ÑÑ‚Ð²Ð¾Ñ€ÐµÐ½Ð½Ñ Ð³ÐµÐ½ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð° Ð· Ð½Ð¾Ð²Ð¸Ð¼ Ð¿Ð¾Ñ‡Ð°Ñ‚ÐºÐ¾Ð²Ð¸Ð¼ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½ÑÐ¼.
+Ð— ÑƒÑ€Ð°Ñ…ÑƒÐ²Ð°Ð½Ð½ÑÐ¼ Ð²Ð°ÑˆÐ¾Ñ— Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð½Ð¾Ñ— Ð¾Ð±Ð»Ð°ÑÑ‚Ñ– ÑÑ‚Ð²Ð¾Ñ€Ð¸Ñ‚Ð¸ Ð°Ð½Ð¾Ð½Ñ–Ð¼Ð½Ð¸Ð¹ PL/SQL-Ð±Ð»Ð¾Ðº, ÑÐºÐ¸Ð¹
+Ð²Ð¸ÐºÐ»Ð¸ÐºÐ°Ñ‚Ð¸Ð¼Ðµ Ð¾Ð´Ð¸Ð½ Ñ–Ð· Ð²Ð°Ñ€Ñ–Ð°Ð½Ñ‚Ñ–Ð² SQL-Ð·Ð°Ð¿Ð¸Ñ‚Ñ–Ð² Ð·Ð¼Ñ–Ð½Ð¸ Ð¿Ð¾Ñ‡Ð°Ñ‚ÐºÐ¾Ð²Ð¾Ð³Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½Ñ Ð³ÐµÐ½ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð° 
+Ð·Ð°Ð»ÐµÐ¶Ð½Ð¾ Ð²Ñ–Ð´ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½Ñ Ð²ÐµÑ€ÑÑ–Ñ— Ð¡Ð£Ð‘Ð”.*/
+DECLARE 
+    sequen_count NUMBER(3) := 1; 
+    sequen_start_with NUMBER(3) := 1; 
+    sequen_increment_by NUMBER(3) := 1; 
+    sequen_name VARCHAR(20) := 'sequen_test'; 
+BEGIN 
+    SELECT COUNT (*) INTO sequen_count FROM all_sequences 
+    WHERE sequence_name = sequen_name; 
+        DBMS_OUTPUT.PUT_LINE('Current DB verion is: ' || DBMS_DB_VERSION.VERSION); 
+        IF (DBMS_DB_VERSION.VERSION > 12) THEN 
+            EXECUTE IMMEDIATE 'ALTER SEQUENCE ' ||  sequen_name || 'sequen_1'; 
+            DBMS_OUTPUT.PUT_LINE('Sequence ' || sequen_name || ' altered.'); 
+        ELSE 
+            EXECUTE IMMEDIATE 'DROP SEQUENCE' ||  sequen_name; 
+            DBMS_OUTPUT.PUT_LINE('Sequence ' || sequen_name || ' droped.'); 
+            EXECUTE IMMEDIATE 'CREATE SEQUENCE ' ||  sequen_name
+                    || 'START WITH' || sequen_start_with 
+                    || 'INCREMENT BY' || sequen_increment_by; 
+            DBMS_OUTPUT.PUT_LINE('Sequence ' || sequen_name || ' created.'); 
+        END IF;  
+END; 
 /*
-Implem_name   Salary
-Alina     7700
-Maria     7500
-Masha     7500
-Sasha     7800
-Alina     8000
-Uliana    8300
-Lila      7900
-Max       8000
-Salary Total = 62700
+Sequence sequen_test altered.
 */
+	
